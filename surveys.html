@@ -25,22 +25,22 @@ document.getElementById("response1").innerHTML = "Good to know!";
 <script>
 function check_info(i) {
 var info=i.value
-if (genre=="Very helpful!"){
+if (info=="Very helpful!"){
 document.getElementById("response2").innerHTML = "That's awesome! We're glad you're happy.";
 }
-else if (genre==="helpful"){
+else if (info==="helpful"){
 document.getElementById("response2").innerHTML = "We're glad you learned something from us! Feel free to let us know if you have questions.";
 }
-else if (genre==="wasn't helpful or unhelpful"){
+else if (info==="wasn't helpful or unhelpful"){
 document.getElementById("response2").innerHTML = "It happens. We'll try to improve so you get a better experience.";
 }
 
-else if (genre==="not very helpful"){
+else if (info==="not very helpful"){
 document.getElementById("response2").innerHTML="Please let us know what we can do to help.";
 
 }
 
-else if (genre==="did absolutely nothing"){
+else if (info==="did absolutely nothing"){
 document.getElementById("response2").innerHTML="Feel free to give us suggestions! The whole point of College cravings is to help you, so we'll try our best to do so!";
 }
 
