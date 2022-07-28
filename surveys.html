@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>College Cravings survey</title>
+<link href="cravings.css" rel="stylesheet" type="text/css">
+<meta name="keywords" content="cooking, college recipes, recipes for college students,affordable, food">
+<meta name="description" content="">
+<script>
+function check_website(w) {
+var website=w.value
+if (website==="Someone told me about it"){
+document.getElementById("response1").innerHTML = "Cool! I'm glad more people know about it.";
+}
+else if (website==="I saw an ad"){
+document.getElementById("response1").innerHTML = "Really? From who? I'm too broke to buy ads.";
+}
+else if (website==="I found it while browsing"){
+document.getElementById("response1").innerHTML = "Nice! Browsing always leads to cool stuff";
+}
+else if (website==="other"){
+document.getElementById("response1").innerHTML = "Good to know!";
+}
+}
+</script>
+<script>
+function check_info(i) {
+var info=i.value
+if (genre=="Very helpful!"){
+document.getElementById("response2").innerHTML = "That's awesome! We're glad you're happy.";
+}
+else if (genre==="helpful"){
+document.getElementById("response2").innerHTML = "We're glad you learned something from us! Feel free to let us know if you have questions.";
+}
+else if (genre==="wasn't helpful or unhelpful"){
+document.getElementById("response2").innerHTML = "It happens. We'll try to improve so you get a better experience.";
+}
+
+else if (genre==="not very helpful"){
+document.getElementById("response2").innerHTML="Please let us know what we can do to help.";
+
+}
+
+else if (genre==="did absolutely nothing"){
+document.getElementById("response2").innerHTML="Feel free to give us suggestions! The whole point of College cravings is to help you, so we'll try our best to do so!";
+}
+
+}
+</script>
+</head>
+
+<body>
+<form action="/email.php" method="post">
+<input type="hidden" name="email" id="email" value="eden.dealba01@gmail.com">
+
+<input type="hidden" name="success">
+
+<div class="navigation">
+<ul>
+<li class="link"><a href="index.html">Home</a> </li>
+<li class="link"><a href="essentials.html">
+The essentials</a></li>
+<li class="link"><a href="Recipes.html">
+Recipe log</a></li>
+<li class="link"><a href="mistakes.html">
+Common Mistakes</a></li>
+<li class="link"><a href="videos.html">
+Watch and learn</a></li>
+<li class="link"><a href="surveys.html">
+Thoughts? </a></li>
+<li class="link"><a href="about.html">
+about us</a></li>
+</ul>
+</div>
+<a name="top"></a>
+
+<div class="content">
+
+<img class="right" src="cookingstuff.jpeg" width="328" height="328" alt="cooking">
+ 
+<h1>Tell us about your experience!</h1>
+
+<p class="spec2">How did you find this website?<br>
+
+<label>
+<input onclick="check_website(this)" id="website1" type="radio" name="website" value="Someone told me about it"/>
+Someone told me about it</label>
+<br>
+<label>
+<input onclick="check_website(this)" id="website2" type="radio" name="website" value="I saw an ad"/>
+I saw an ad</label>
+<br>
+
+
+<label>
+<input onclick="check_website(this)" id="website3" type="radio" name="website" value="I found it while browsing"/>
+I found it while browsing
+</label>
+
+<label>
+<input onclick="check_website(this)" id="website4" type="radio" name="website" value="other"/>
+<input type="text" name="personal" placeholder="other (please tell us)"/></label>
+<br>
+<div id="response1"></div>
+</p>
+<p class="spec2">What do you think of the information in this website?<br>
+ 
+
+<label><input onclick="check_info(this)" id="info1" type="radio" name="info" value="Very helpful!"/>
+Very helpful!</label>
+<br>
+<label><input  onclick="check_info(this)" id="info2" type="radio" name="info" value="helpful"/>
+helpful</label>
+<br>
+<label><input  onclick="check_info(this)" id="info3" type="radio" name="info" value="wasn't helpful or unhelpful"/>
+wasn't helpful or unhelpful</label>
+<br>
+<label><input onclick="check_info(this)" id="info4"type="radio" name="info" value="not very helpful"/>
+not very helpful</label>
+
+<br>
+<label><input onclick="check_info(this)" id="info5" type="radio" name="info" value="did absolutely nothing"/>
+did absolutely nothing</label>
+<div id="response2"></div>
+</p>
+<p class="spec2" >Which cooking appliances do you have access to?<br>
+<label><input type="checkbox" name="appliance1" value="stove"/>
+stove</label><br>
+
+<label><input type="checkbox" name="appliance2" value="instant pot"/>
+instant pot</label><br>
+
+<label><input type="checkbox" name="appliance3" value="microwave"/>
+microwave</label><br>
+
+<label><input type="checkbox" name="appliance4" value="oven"/>
+oven</label><br>
+
+<label><input type="checkbox" name="appliance5" value="other"/>
+<input type="text" name="personal" placeholder="other (specify)"/></label>
+</p>
+
+<p class="spec2" >What kind of recipes should we add?<br>
+<label><input type="checkbox" name="recipe1" value="soups/appetizers"/>
+stove</label><br>
+
+<label><input type="checkbox" name="recipe2" value="mexican food"/>
+mexican food</label><br>
+
+<label><input type="checkbox" name="recipe3" value="chinese food"/>
+chinese food</label><br>
+
+<label><input type="checkbox" name="recipe4" value="italian food"/>
+italian food</label><br>
+
+<label><input type="checkbox" name="recipe5" value="american/comfort food"/>
+american/comfort food</label><br>
+
+<label><input type="checkbox" name="recipe6" value="desserts"/>
+desserts</label><br>
+
+<label><input type="checkbox" name="recipe7" value="other"/>
+<input type="text" name="personal" placeholder="other (specify)"/></label>
+</p>
+
+
+<p class="spec2">
+<tr><td>
+How often should we post our cooking videos?
+<select name="videos">
+<option value="1">1 per week</option>
+<option value="2">2 per week</option>
+<option value="3">3 per week</option>
+<option value="4">4 or more per week</option>
+</select></p>
+</td></tr></table>
+
+
+<p class="spec2">
+<label>Please enter your name: <input type="text" name="visitor"  required="required"/></label><br><br>
+<label>Please enter your email address/phone number<input type="password" name="visitormail" size="35"  required="required"/></label><br></p>
+
+<p class="spec2">
+<br>We want to learn more about you!
+
+<label>Tell us about you and your situation (why did you choose us for cooking help?) <br>
+<textarea name="situation" rows="4" cols="45"></textarea></label></p>
+
+<p class="spec2">
+<label>Please type any questions or comments you have in the box below.<br>
+<textarea name="comments" rows="4" cols="45"></textarea></label>
+</p>
+
+<p class="spec2">
+<label>Please put any suggestions here<br>
+<textarea name="suggestions" rows="4" cols="45"></textarea></label>
+</p>
+
+<p align="center">
+<input type="submit" value="Send">
+</p>
+<p align="center">
+<input type="reset" value="Start over">
+</p>
+</div>
+
+</form>
+</body>
+</html>
